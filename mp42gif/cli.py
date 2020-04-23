@@ -1,7 +1,7 @@
 """Console script for mp42gif."""
 import sys
 import click
-import mp42gif
+import mp42gif.mp42gif as mp42gif
 
 
 @click.command()
