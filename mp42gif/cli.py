@@ -1,15 +1,18 @@
 """Console script for mp42gif."""
 import sys
 import click
+import mp42gif
 
 
 @click.command()
-@click.option
-def main(args=None):
-    """Console script for mp42gif."""
-    click.echo("Replace this message by putting your code into "
-               "mp42gif.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
+@click.argument('video_path')
+@click.argument('dir_path')
+@click.argument('basename')
+@click.option('--ext', '-e', default='jpg')
+@click.option('--quality', '-q', default="high")
+@click.option('--crop', '-c', default='none')
+def main(video_path, dir_path, basename, quality, ext, crop):
+    mp42gif.mp4togif(str(video_path), str(dir_path), str(basename), str(quality), str(crop), str(ext))
     return 0
 
 
