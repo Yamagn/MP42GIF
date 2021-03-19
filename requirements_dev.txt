@@ -9,4 +9,4 @@ Sphinx==1.8.5
 twine==1.14.0
 Click==7.0
 opencv-python==4.2.0.34
-Pillow==7.1.1
+Pillow==8.1.1
